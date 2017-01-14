@@ -42,9 +42,9 @@
   <ItemGroup>
     <Compile Include="Hotel.cs" />
     <Compile Include="HotelMatcher.cs" />
-    <Compile Include="PrivateHotelMatchers\ContraryCountryGetawaysHotelMatcher.cs" />
-    <Compile Include="PrivateHotelMatchers\SuperfluousHotelMatcher.cs" />
-    <Compile Include="PrivateHotelMatchers\ThereaboutsHolidaysHotelMatcher.cs" />
+    <Compile Include="HotelMatchers\ContraryCountryGetawaysHotelMatcher.cs" />
+    <Compile Include="HotelMatchers\SuperfluousHotelMatcher.cs" />
+    <Compile Include="HotelMatchers\ThereaboutsHolidaysHotelMatcher.cs" />
     <Compile Include="HotelMatchersFactory.cs" />
     <Compile Include="Interfaces\IHotelMatcher.cs" />
     <Compile Include="SupplierHotel.cs" />

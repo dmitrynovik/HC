@@ -1,5 +1,4 @@
 ﻿using NUnit.Framework;
-using System;
 
 namespace HotelMatcher.UnitTest
 {
@@ -11,19 +10,24 @@ namespace HotelMatcher.UnitTest
         [Test]
         public void When_Names_Have_Same_Words_In_Reverse_Order_Hotels_Match()
         {
-            Assert.IsTrue(Matcher.IsMatch(CreateSupplierHotel("Manor Country Mayhew’s Ralph Lord"), CreateHotel("Lord Ralph Mayhew’s Country Manor")));
+            Assert.IsTrue(
+                Matcher.Macthes(
+                    CreateSupplierHotel("Manor Country Mayhew’s Ralph Lord"), 
+                    CreateHotel("Lord Ralph Mayhew’s Country Manor")
+                    )
+               );
         }
 
         [Test]
         public void When_Names_Are_Empty_Hotels_Match()
         {
-            Assert.IsTrue(Matcher.IsMatch(CreateSupplierHotel(""), CreateHotel("")));
+            Assert.IsTrue(Matcher.Macthes(CreateSupplierHotel(""), CreateHotel("")));
         }
 
         [Test]
         public void When_Names_Are_Null_Hotels_Match()
         {
-            Assert.IsTrue(Matcher.IsMatch(CreateSupplierHotel(null), CreateHotel(null)));
+            Assert.IsTrue(Matcher.Macthes(CreateSupplierHotel(null), CreateHotel(null)));
         }
     }
 }

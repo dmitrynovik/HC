@@ -1,6 +1,6 @@
 ﻿using System;
+using HotelMatcher.HotelMatchers;
 using HotelMatcher.Interfaces;
-using HotelMatcher.PrivateHotelMatchers;
 
 namespace HotelMatcher
 {

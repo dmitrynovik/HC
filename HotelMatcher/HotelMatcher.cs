@@ -8,16 +8,13 @@ namespace HotelMatcher
     /// </summary>
     public class HotelMatcher : IHotelMatcher
     {
-        public bool IsMatch(SupplierHotel supplierHotel, Hotel hotel)
+        public bool Macthes(SupplierHotel supplierHotel, Hotel hotel)
         {
-            // Validation for Null:
-            if (supplierHotel == null)
-                throw new ArgumentNullException("supplierHotel");
-            if (hotel == null)
-                throw new ArgumentNullException("hotel");
+            if (supplierHotel == null) throw new ArgumentNullException(nameof(supplierHotel));
+            if (hotel == null) throw new ArgumentNullException(nameof(hotel));
 
             // Use factory to create correct matcher for the given code:
-            return HotelsMatchersFactory.Create(supplierHotel.SupplierCode).IsMatch(supplierHotel, hotel);
+            return HotelsMatchersFactory.Create(supplierHotel.SupplierCode).Macthes(supplierHotel, hotel);
         }
     }
 }

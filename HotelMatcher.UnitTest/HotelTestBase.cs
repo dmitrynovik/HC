@@ -1,5 +1,4 @@
 ﻿using HotelMatcher.Interfaces;
-using NUnit.Framework;
 
 namespace HotelMatcher.UnitTest
 {
@@ -8,7 +7,7 @@ namespace HotelMatcher.UnitTest
         protected abstract string SupplierCode { get; }
         protected readonly IHotelMatcher Matcher;
 
-        public HotelTestBase()
+        protected HotelTestBase()
         {
             Matcher = HotelsMatchersFactory.Create(SupplierCode);
         }

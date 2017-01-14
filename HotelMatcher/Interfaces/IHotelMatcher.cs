@@ -2,6 +2,6 @@
 {
     public interface IHotelMatcher
     {
-	    bool IsMatch(SupplierHotel supplierHotel, Hotel hotel);
+	    bool Macthes(SupplierHotel supplierHotel, Hotel hotel);
     }
 }
