@@ -6,13 +6,10 @@ namespace HotelMatcher.UnitTest
     [TestFixture]
     public class ContraryCountryHotelsTest : HotelTestBase
     {
-        protected override string SupplierCode
-        {
-            get { return "GCC"; }
-        }
+        protected override string SupplierCode => "GCC";
 
         [Test]
-        public void When_Names_Consist_Of_Words_In_Reverse_Order_Hotels_Match()
+        public void When_Names_Have_Same_Words_In_Reverse_Order_Hotels_Match()
         {
             Assert.IsTrue(Matcher.IsMatch(CreateSupplierHotel("Manor Country Mayhew’s Ralph Lord"), CreateHotel("Lord Ralph Mayhew’s Country Manor")));
         }
