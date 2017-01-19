@@ -22,7 +22,7 @@ namespace HotelMatcher.HotelMatchers
             // Return the new "core" lowercase string containing only letters and digits.
             // Example: " AbBa; " => "abba"
             return new string(source.Where(char.IsLetterOrDigit)
-                .Select(char.ToLower)
+                .Select(char.ToLowerInvariant)
                 .ToArray());
         }
     }
